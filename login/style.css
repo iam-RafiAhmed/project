@@ -32,12 +32,16 @@
     width: 320px;
 }
 
-.searchBtn{
+#searchBtn{
     background-color: #EC009B;
     color: white;
     padding: 12px;
     border-radius: 5px;
     border: none;
+}
+
+#searchBtn:hover{
+    cursor: pointer;
 }
 
 .pink{
@@ -84,7 +88,7 @@
     margin-bottom: 10px;
 }
 
-.loginBtn{
+#loginBtn{
     background-color: #EFF1F4;
     width: 98%;
     height: 40px;
@@ -97,6 +101,12 @@
     font-weight: 600;
     color: #858D9E;
 }
+
+#loginBtn:hover{
+    cursor: pointer;
+}
+
+
 
 .Register{
     color: #EC009B;
