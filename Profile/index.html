@@ -4,13 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Log in</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="profileStyle.css">
     <link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css" />
-    
+    <title>Profile</title>
 </head>
 
-<body style="margin: 0px;">
+<body style="margin: 0;">
     <nav class="pink">
 
         <a class="navLink" href=""><i class="hgi hgi-stroke hgi-home-09"></i>Home</a>
@@ -28,30 +27,29 @@
             <button id="searchBtn">Search</button>
         </div>
     </section>
-
-
-    <!-- Login banner -->
-    <section class="loginBanner">
-        <div>
-            <img src="loginpic.png" alt="">
-        </div>
-        <div>
-            <h1 class="signBanner">Sign In</h1>
-            <p class="signText">To access the best products and deals <br>in Bangladesh in one touch!</p>
-        </div>
-        <div class="loginBox">
-            <p>Email/Phone Number</p>
-            <input id="loginMail" class="textField" type="text" name="" id="" placeholder="enter email">
-            <p>Password</p>
-            <input id="loginPass" class="textField" type="password" name="" id="" placeholder="Enter Password">
+    <section id="center">
+        <div class="options">
             <div>
-                <button id="loginBtn" onclick="signIn()">Sign In</button>
+                <p>Name</p>
             </div>
-            <div class="regLine">
-                <p class="regP">New to BestCart?</p> <a class="Register" href="">Register</a>
+            <div>
+                <a class="option" id="manageAccount" href="">Manage My Account</a>
+                <a class="option" id="profile" href="">My Profile</a>
+                <a class="option" id="address" href="">Address Book</a>
             </div>
+            <div>
+                <a class="option" href="">My Voucher</a>
+                <a class="option" href="">My orders</a>
+                <a class="option" href="">My Wishlist</a>
+                <a class="option" href="">Logout</a>
+            </div>
+        </div>
+
+        <div id="optionDetails">
+            
         </div>
     </section>
+
 
     <!-- footer -->
     <footer class="">
@@ -104,7 +102,8 @@
         </div>
     </footer>
 
-    <script src="loginScript.js"></script>
+
+    <script src="profile.js"></script>
 </body>
 
 </html>

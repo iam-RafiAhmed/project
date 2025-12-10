@@ -22,6 +22,7 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
 .logoArea input{
@@ -57,89 +58,93 @@
     gap: 16px;
     justify-content: flex-end;
     padding-right: 50px;
-}
-
-.loginBanner{
-    background: linear-gradient(135deg, #fd88b9, #ffff);
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding-left: 70px;
-    padding-right: 70px;
-}
-
-.loginBox{
-    height: fit-content; 
-    width: 380px; 
-    border: 1px solid white; 
-    box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
-    background-color: white;
-    border-radius: 10px;
-    padding: 15px;
     
 }
 
-.textField{
-    height: 22px;
-    width: 98%;
-    padding: 6px;
-    margin: 0;
-    border-radius: 5px;
-    border: 1px solid #6d7482;
-    color: #858D9E;
-    margin-bottom: 10px;
+/* Nav ends here */
+
+/* center part starts here */
+
+#center{
+    background-color: #F9FAFB;
+    padding-top: 50px;
+    display: flex;
+    align-items:flex-start  ;
+    justify-content: space-between;
+    padding-bottom: 50px;
 }
 
-#ContinueBtn{
+.options a{
+    text-decoration: none;
+    color: #7F8899;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.options a:hover{
+    color: #EC009B;
+}
+
+.options{
+    width: 250px;
+    background-color: white;
+    margin-left: 150px;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+#optionDetails{
+    width: 1200px;
+    background-color: white;
+    height: 550px;
+    margin-right: 150px;
+    border-radius: 8px;
+
+    padding: 30px;
+    position: relative;
+}
+
+.personalLine{
+    display: inline;
+}
+
+.myProfile{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.profileBtn{
     background-color: #EFF1F4;
-    width: 98%;
-    height: 40px;
-    text-align: center;
-    margin: 6px;
-    padding: 6px;
-    border-radius: 5px;
+    color: #858D9E;
+    border-radius: 12px;
     border: none;
     font-size:large;
     font-weight: 600;
-    color: #858D9E;
+    margin: 6px;
+    padding: 9px;
+    height: 40px;
+    text-align: center;
+    
 }
 
-#ContinueBtn:hover{
+.profileBtn:hover{
     cursor: pointer;
 }
 
-#submitBtn{
-    background-color: #EFF1F4;
-    width: 98%;
-    height: 40px;
-    text-align: center;
-    margin: 6px;
-    padding: 6px;
-    border-radius: 5px;
-    border: none;
-    font-size:large;
-    font-weight: 600;
-    color: #858D9E;
-    display: none;
+.btnGrp{
+    position: absolute;
+    right: 5%;
+    bottom: 5%;
 }
 
-#otpSection{
-    display: none;
-}
-
-.signBanner{
-    color: #EC009B;
-    font-size: 48px;
-}
-
-.signText{
-    color:rgb(23, 24, 23);
-    font-size:18px;
-}
+/* Details of options */
 
 
-/* footer styles */
 
+
+
+/* footer style */
 .footer{
     display: flex;
     align-items: flex-start;
