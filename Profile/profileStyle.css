@@ -104,8 +104,22 @@
     position: relative;
 }
 
+#optionDetails a{
+    text-decoration:none;
+    color: rgb(60, 60, 245);
+    font-weight: 600;
+    margin-left: 7px;
+}
+
 .personalLine{
     display: inline;
+    font-size: x-large;
+}
+
+.myAccount{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
 }
 
 .myProfile{

@@ -10,9 +10,16 @@ options.forEach(option => {
             let opt = document.getElementById(cls);
             options.forEach(o=> o.style.color = "#7F8899");
             opt.style.color = "#EC009B";
-            detailBox.innerHTML = `<h3>Manage Account</h3>
-            <p class="personalLine">Personal Profile</p> <a href="">Edit</a>
-            <p>abcd@gmail.com</p>`
+            detailBox.innerHTML = `<h2 class="">Manage Account</h3>
+            <div class="myAccount">
+                <div>              
+                <p class="personalLine">Personal Profile</p> <a href="">Edit</a>
+                <p>abcd@gmail.com</p>
+            </div>
+            <div>
+                <p class="personalLine">Address Book</p> <a href="">Edit</a>
+                <p>Default Delivery address</p>
+            </div>`
         }
         else if(cls == "profile"){
             let opt = document.getElementById(cls);
