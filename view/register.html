@@ -4,10 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Log in</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../asset/styleReg.css">
     <link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css" />
-    
+    <title>Register</title>
 </head>
 
 <body style="margin: 0px;">
@@ -19,7 +18,7 @@
     </nav>
     <section class="logoArea" style="width: full; height: 70px; margin: 0px; padding: 5px;">
         <div class="logo">
-            <img src="cart.png" alt="" height="70px">
+            <img src="../asset/cart.png" alt="" height="70px">
             <h1 class="logoText">BestCart</h1>
         </div>
         <div>
@@ -33,23 +32,32 @@
     <!-- Login banner -->
     <section class="loginBanner">
         <div>
-            <img src="loginpic.png" alt="">
+            <img src="../asset/bags.png" alt="">
         </div>
         <div>
-            <h1 class="signBanner">Sign In</h1>
+            <h1 class="signBanner">Register</h1>
             <p class="signText">To access the best products and deals <br>in Bangladesh in one touch!</p>
         </div>
         <div class="loginBox">
-            <p>Email/Phone Number</p>
-            <input id="loginMail" class="textField" type="text" name="" id="" placeholder="enter email">
-            <p>Password</p>
-            <input id="loginPass" class="textField" type="password" name="" id="" placeholder="Enter Password">
+            <p>Email</p>
+            <input id="mail" class="textField" type="email" name="" id="" placeholder="enter email" required>
+            <div id="otpSection">
+                <p>OTP</p>
+                <input id="otpField" class="textField" type="text" name="" id="" placeholder="Enter the OTP">
+            </div>
+
             <div>
-                <button id="loginBtn" onclick="signIn()">Sign In</button>
+                <button id="ContinueBtn" onclick="Continue()">Continue</button>
             </div>
-            <div class="regLine">
-                <p class="regP">New to BestCart?</p> <a class="Register" href="">Register</a>
+            <div>
+                <button id="submitBtn" onclick="Submit()">Submit</button>
             </div>
+            <div id="passSection">
+                <p>Create password</p>
+                <input id="passField" class="textField" type="text" name="" id="" placeholder="Create password">
+                <button id="confirmBtn" onclick="Confirm()">Confirm</button>
+            </div>
+
         </div>
     </section>
 
@@ -104,7 +112,7 @@
         </div>
     </footer>
 
-    <script src="loginScript.js"></script>
+    <script src="../asset/register.js"></script>
 </body>
 
 </html>
