@@ -1,16 +1,20 @@
+<?php
+    include('../controller/authCheck.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../asset/styleReg.css">
+    <link rel="stylesheet" href="../asset/profileStyle.css">
+    <link rel="stylesheet" href="../asset/changePassword.css">
     <link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css" />
-    <title>Register</title>
+    <title>Change Password</title>
 </head>
-
-<body style="margin: 0px;">
-    <nav class="pink">
+<body style="margin: 0;">
+    <!-- navbar -->
+     <nav class="pink">
 
         <a class="navLink" href=""><i class="hgi hgi-stroke hgi-home-09"></i>Home</a>
         <a class="navLink" href=""><i class="hgi hgi-stroke hgi-customer-service-01"></i>Help & Support</a>
@@ -29,39 +33,25 @@
     </section>
 
 
-    <!-- Login banner -->
-    <section class="loginBanner">
-        <div>
-            <img src="../asset/bags.png" alt="">
-        </div>
-        <div>
-            <h1 class="signBanner">Register</h1>
-            <p class="signText">To access the best products and deals <br>in Bangladesh in one touch!</p>
-        </div>
-        <div class="loginBox">
-            <p>Email</p>
-            <input id="mail" class="textField" type="email" name="" id="" placeholder="enter email" required>
-            <div id="otpSection">
-                <p>OTP</p>
-                <input id="otpField" class="textField" type="text" name="" id="" placeholder="Enter the OTP">
+    <!-- mid section -->
+    <section id="passContainer">
+        <form action="../controller/passChanger.php" method="post" onsubmit="return check()">
+            <div id="passBox">
+                <h3>Email: <?php echo $_SESSION['email'];?></h3><br>
+                <h3>Current Password: </h3><br>
+                <input type="password" name="currentPassword">
+                <h3>New Password: </h3><br>
+                <input type="password" name="newPass" id="newPass">
+                <h3>Confirm Password: </h3>
+                <input type="password" name="confirmPass" id="confirmPass">
+                <input type="submit" id="confirm" name="submit" value="Submit">
             </div>
-
-            <div>
-                <button id="ContinueBtn" onclick="Continue()">Continue</button>
-            </div>
-            <div>
-                <button id="submitBtn" onclick="Submit()">Submit</button>
-            </div>
-            <div id="passSection">
-                <p>Create password</p>
-                <input id="passField" class="textField" type="text" name="" id="" placeholder="Create password">
-                <button id="confirmBtn" onclick="Confirm()">Confirm</button>
-            </div>
-
-        </div>
+        </form>           
     </section>
 
-    <!-- footer -->
+
+
+     <!-- footer -->
     <footer class="">
         <div class="footer">
 
@@ -111,8 +101,6 @@
             </div>
         </div>
     </footer>
-
-    <script src="../asset/register.js"></script>
+    <script src="../asset/changePass.js"></script>
 </body>
-
 </html>

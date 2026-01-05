@@ -1,11 +1,6 @@
-
 let mail = document.getElementById("mail");
 let continueBtn = document.getElementById("ContinueBtn");
-let submitBtn = document.getElementById("submitBtn");
 let confirmBtn = document.getElementById("confirmBtn");
-let otpSection = document.getElementById("otpSection");
-let otpField = document.getElementById("otpField");
-
 let passField = document.getElementById("passField");
 let passSection = document.getElementById("passSection");
 
@@ -21,25 +16,13 @@ Continue = () => {
     }
     else{
         mail.style.borderColor = "green";
-        otpSection.style.display = "block";
         continueBtn.style.display = "none";
-        submitBtn.style.display = "block";
-
-    }
-}
-
-Submit= ()=>{
-    if(otpField.value.length!==6){
-        alert("Put the OTP properly!");
-        return;
-    }
-    else{
-        otpField.style.borderColor = "green";
-        submitBtn.style.display = "none";
-        
+        confirmBtn.style.display = "block";
         passSection.style.display = "block";
     }
 }
+
+
 
 Confirm = ()=>{
     if(passField.value < 6){
@@ -48,13 +31,16 @@ Confirm = ()=>{
     }
 }
 
+continueBtn.addEventListener("click", Continue);
+confirmBtn.addEventListener("click", Confirm);
 
 
-checkField = () => {
+
+
+checkMailField = () => {
     if (mail.value !== "") {
         continueBtn.style.backgroundColor = "#EC009B";
-        continueBtn.style.color = "white";
-
+        continueBtn.style.color = "#ffffff";
     }
     
     else{
@@ -64,7 +50,7 @@ checkField = () => {
 }
 
 checkConfirm= ()=>{
-    if(passField.value.length >= 6){
+    if(passField.value.length > 6){
         confirmBtn.style.backgroundColor = "#EC009B";
         confirmBtn.style.color = "white";
     }
@@ -74,19 +60,10 @@ checkConfirm= ()=>{
     }
 }
 
-checkSubmit= ()=>{
-    if(otpField.value.length ==6 ){
-        submitBtn.style.backgroundColor = "#EC009B";
-        submitBtn.style.color = "white";
-    }
-    else{
-        submitBtn.style.backgroundColor = "#EFF1F4";
-        submitBtn.style.color = "#858D9E";
-    }
-}
 
 
-mail.addEventListener("input", checkField);
-otpField.addEventListener("input", checkSubmit);
+
+mail.addEventListener("input", checkMailField);
+
 passField.addEventListener("input", checkConfirm);
 

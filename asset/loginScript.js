@@ -6,7 +6,10 @@ let loginBtn = document.getElementById("loginBtn");
 signIn = () => {
     if (mail.value == "" || password.value == "") {
         alert("Please input mail and password.");
-        return;
+        return false;
+    }
+    else{
+        return true;
     }
 }
 

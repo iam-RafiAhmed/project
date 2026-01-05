@@ -27,6 +27,7 @@
                 style="height: 30px; border: 1px solid #fcaadc;">
             <button id="searchBtn">Search</button>
         </div>
+        
     </section>
 
 
@@ -39,18 +40,20 @@
             <h1 class="signBanner">Sign In</h1>
             <p class="signText">To access the best products and deals <br>in Bangladesh in one touch!</p>
         </div>
-        <div class="loginBox">
+        <form action="../controller/loginCheck.php" method="post" onsubmit="return signIn();">
+            <div class="loginBox">
             <p>Email/Phone Number</p>
-            <input id="loginMail" class="textField" type="text" name="" id="" placeholder="enter email">
+            <input id="loginMail" class="textField" type="text" name="email" placeholder="enter email">
             <p>Password</p>
-            <input id="loginPass" class="textField" type="password" name="" id="" placeholder="Enter Password">
+            <input id="loginPass" class="textField" type="password" name="password" placeholder="Enter Password">
             <div>
-                <button id="loginBtn" onclick="signIn()">Sign In</button>
+                <input type="submit" name="submit" id="loginBtn" value="Sign In">               
             </div>
             <div class="regLine">
-                <p class="regP">New to BestCart?</p> <a class="Register" href="">Register</a>
+                <p class="regP">New to BestCart?</p> <a class="Register" href="../view/register.php">Register</a>
             </div>
         </div>
+        </form>
     </section>
 
     <!-- footer -->

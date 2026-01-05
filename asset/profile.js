@@ -1,5 +1,6 @@
 const options = document.querySelectorAll(".option");
 const detailBox = document.getElementById("optionDetails");
+const email = detailBox.dataset.email;
 
 
 options.forEach(option => {
@@ -10,23 +11,7 @@ options.forEach(option => {
         if (id == "logout") return;
 
         e.preventDefault();
-
-        if (id == "manageAccount") {
-            let opt = document.getElementById(id);
-            options.forEach(o => o.style.color = "#7F8899");
-            opt.style.color = "#EC009B";
-            detailBox.innerHTML = `<h2 class="">Manage Account</h3>
-            <div class="myAccount">
-                <div>              
-                <p class="personalLine">Personal Profile</p> <a href="">Edit</a>
-                <p>abcd@gmail.com</p>
-            </div>
-            <div>
-                <p class="personalLine">Address</p> <a href="">Edit</a>
-                <p>Default Delivery address</p>
-            </div>`
-        }
-        else if (id == "profile") {
+        if (id == "profile") {
             let opt = document.getElementById(id);
             options.forEach(o => o.style.color = "#7F8899");
             opt.style.color = "#EC009B";
@@ -46,14 +31,14 @@ options.forEach(option => {
             </div>
                 <div>
                     <h3>Email</h3>
-                    <p>---</p>
+                    <p>${email}</p>
                     <h3>Phone Number</h3>
                     <p>---</p>
                 </div>
             </div>
             <div class="btnGrp">
-                <button class="profileBtn">Change Password</button>
-                <button class="profileBtn">Edit Profile</button>
+                <a href="../view/changePassword.php"><button class="profileBtn">Change Password</button></a>
+                <a href="../view/editProfile.php"><button class="profileBtn">Edit Profile</button></a>
             </div>`
         }
         else if (id == "orders") {
