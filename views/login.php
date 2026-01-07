@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Log in</title>
-    <link rel="stylesheet" href="../asset/styleLogin.css">
+    <link rel="stylesheet" href="../assets/styleLogin.css">
     <link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css" />
     
 </head>
@@ -19,7 +19,7 @@
     </nav>
     <section class="logoArea" style="width: full; height: 70px; margin: 0px; padding: 5px;">
         <div class="logo">
-            <img src="../asset/cart.png" alt="" height="70px">
+            <img src="../assets/cart.png" alt="" height="70px">
             <h1 class="logoText">BestCart</h1>
         </div>
         <div>
@@ -34,13 +34,13 @@
     <!-- Login banner -->
     <section class="loginBanner">
         <div>
-            <img src="../asset/loginpic.png" alt="">
+            <img src="../assets/loginpic.png" alt="">
         </div>
         <div>
             <h1 class="signBanner">Sign In</h1>
             <p class="signText">To access the best products and deals <br>in Bangladesh in one touch!</p>
         </div>
-        <form action="../controller/loginCheck.php" method="post" onsubmit="return signIn();">
+        <form action="../controllers/loginCheck.php" method="post" onsubmit="return signIn();">
             <div class="loginBox">
             <p>Email/Phone Number</p>
             <input id="loginMail" class="textField" type="text" name="email" placeholder="enter email">
@@ -50,7 +50,7 @@
                 <input type="submit" name="submit" id="loginBtn" value="Sign In">               
             </div>
             <div class="regLine">
-                <p class="regP">New to BestCart?</p> <a class="Register" href="../view/register.php">Register</a>
+                <p class="regP">New to BestCart?</p> <a class="Register" href="../views/register.php">Register</a>
             </div>
         </div>
         </form>
@@ -107,7 +107,7 @@
         </div>
     </footer>
 
-    <script src="../asset/loginScript.js"></script>
+    <script src="../assets/loginScript.js"></script>
 </body>
 
 </html>

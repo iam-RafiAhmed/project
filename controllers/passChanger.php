@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once('../model/userModel.php');
+require_once('../models/userModel.php');
 
 
 if (!isset($_SESSION['email'])) {
@@ -27,7 +27,7 @@ if (isset($_POST['submit'])) {
 
         if ($updateStatus) {
             echo "Password successfully updated!";
-            header("Location: ../view/profile.php");  
+            header("Location: ../views/profile.php");  
             exit;
         } else {
             echo "Error updating the password.";

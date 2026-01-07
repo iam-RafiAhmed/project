@@ -1,5 +1,5 @@
 <?php
-    require_once('../model/userModel.php');
+    require_once('../models/userModel.php');
     if(isset($_POST['submit']) == true){
     session_start();
     $email = $_REQUEST['email'];
@@ -10,7 +10,7 @@
         if($status){
             setcookie('status', 'true', time()+3000, '/');
             $_SESSION['email'] = $email;
-            header('location: ../view/profile.php');
+            header('location: ../views/profile.php');
             
         }
         else{
@@ -18,7 +18,7 @@
         }
 }
     else{
-        header('location: ../view/login.php');
+        header('location: ../views/login.php');
     }
 
 ?>

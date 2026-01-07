@@ -1,16 +1,20 @@
+<?php
+    include('../controllers/authCheck.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../asset/styleReg.css">
+    <link rel="stylesheet" href="../assets/profileStyle.css">
+    <link rel="stylesheet" href="../assets/editProfile.css">
     <link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css" />
-    <title>Register</title>
+    <title>Edit Profile</title>
 </head>
-
-<body style="margin: 0px;">
-    <nav class="pink">
+<body style="margin: 0;">
+    <!-- navbar -->
+     <nav class="pink">
 
         <a class="navLink" href=""><i class="hgi hgi-stroke hgi-home-09"></i>Home</a>
         <a class="navLink" href=""><i class="hgi hgi-stroke hgi-customer-service-01"></i>Help & Support</a>
@@ -18,7 +22,7 @@
     </nav>
     <section class="logoArea" style="width: full; height: 70px; margin: 0px; padding: 5px;">
         <div class="logo">
-            <img src="../asset/cart.png" alt="" height="70px">
+            <img src="../assets/cart.png" alt="" height="70px">
             <h1 class="logoText">BestCart</h1>
         </div>
         <div>
@@ -29,41 +33,38 @@
     </section>
 
 
-    <!-- Login banner -->
-    <section class="loginBanner">
-        <div>
-            <img src="../asset/bags.png" alt="">
-        </div>
-        <div>
-            <h1 class="signBanner">Register</h1>
-            <p class="signText">To access the best products and deals <br>in Bangladesh in one touch!</p>
-        </div>
 
+    <section id="areaContainer">
 
-        <!-- Form here -->
-        <form action="../controller/registerCheck.php" method="post">
-            <div class="loginBox">
-            <p>Email</p>
-            <input id="mail" class="textField" type="email" name="email" placeholder="enter email" required>
-            <div>
-                <button type="button" id="ContinueBtn" >Continue</button>
+        <form action="../controllers/profileUpdate.php" method="post" onsubmit="return numberChecker()">
+
+            <div id="editArea">
+
+                <h3>Email: <?php echo $_SESSION['email']; ?></h3>
+
+                <h3>Name</h3>
+                <input type="text" name="username">
+
+                <h3>Phone Number</h3>
+                <input id="phone" type="tel" name="phoneNumber">
+
+                <h3>Gender</h3>
+                <input type="text" name="gender">
+
+                <h3>My Address</h3>
+                <input type="text" name="address">
+
+                <input type="submit" name="submit" id="changeConfirm" value="Confirm">
+
             </div>
-            <div id="passSection">
-                <p>Create password</p>
-                <input id="passField" class="textField" type="password" name="password" placeholder="Create password" required>
-                <input type="submit" name="submit" id="confirmBtn" value="Confirm">
-                
-            </div>
-            <div class="alreadySign">
-                    <p class="aref">Already a user? </p><a class="signInLink" href="login.php">Sign in</a>
-                </div>
 
-        </div>
         </form>
+
     </section>
 
 
-    <!-- footer -->
+
+     <!-- footer -->
     <footer class="">
         <div class="footer">
 
@@ -113,8 +114,6 @@
             </div>
         </div>
     </footer>
-
-    <script src="../asset/register.js"></script>
+    <script src="../assets/editProfile.js"></script>
 </body>
-
 </html>

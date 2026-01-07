@@ -1,20 +1,15 @@
-<?php
-    include('../controller/authCheck.php');
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../asset/profileStyle.css">
+    <link rel="stylesheet" href="../assets/styleReg.css">
     <link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css" />
-    <title>Profile</title>
+    <title>Register</title>
 </head>
 
-<body style="margin: 0;">
+<body style="margin: 0px;">
     <nav class="pink">
 
         <a class="navLink" href=""><i class="hgi hgi-stroke hgi-home-09"></i>Home</a>
@@ -32,22 +27,41 @@
             <button id="searchBtn">Search</button>
         </div>
     </section>
-    <section id="center">
-        <div class="options">
-            <div>
-                <p>Name</p>
-            </div>
-            <div>
-                <a class="option" id="profile" href="">My Profile</a>
-                <a class="option" id="orders" href="">My orders</a>
-                <a class="option" id="wishlist" href="">My Wishlist</a>
-                <a class="option" id="logout" href="../controller/logout.php">Logout</a>
-            </div>
+
+
+    <!-- Login banner -->
+    <section class="loginBanner">
+        <div>
+            <img src="../assets/bags.png" alt="">
+        </div>
+        <div>
+            <h1 class="signBanner">Register</h1>
+            <p class="signText">To access the best products and deals <br>in Bangladesh in one touch!</p>
         </div>
 
-        <div id="optionDetails" data-email="<?php echo $_SESSION['email']; ?>">
-            
+
+        <!-- Form here -->
+        <form action="../controllers/registerCheck.php" method="post">
+            <div class="loginBox">
+            <p>Email</p>
+            <input id="mail" class="textField" type="email" name="email" placeholder="enter email" required>
+            <div>
+                <button type="button" id="ContinueBtn" >Continue</button>
+            </div>
+            <div id="passSection">
+                <p>Username</p>
+                <input type="text" name="username" class="textField" placeholder="give username">
+                <p>Create password</p>
+                <input id="passField" class="textField" type="password" name="password" placeholder="Create password" required>
+                <input type="submit" name="submit" id="confirmBtn" value="Confirm">
+                
+            </div>
+            <div class="alreadySign">
+                    <p class="aref">Already a user? </p><a class="signInLink" href="login.php">Sign in</a>
+                </div>
+
         </div>
+        </form>
     </section>
 
 
@@ -102,8 +116,7 @@
         </div>
     </footer>
 
-
-    <script src="../asset/profile.js"></script>
+    <script src="../assets/register.js"></script>
 </body>
 
 </html>

@@ -1,5 +1,5 @@
 <?php
-    include('../controller/authCheck.php');
+    include('../controllers/authCheck.php');
 ?>
 
 <!DOCTYPE html>
@@ -7,8 +7,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../asset/profileStyle.css">
-    <link rel="stylesheet" href="../asset/changePassword.css">
+    <link rel="stylesheet" href="../assets/profileStyle.css">
+    <link rel="stylesheet" href="../assets/changePassword.css">
     <link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css" />
     <title>Change Password</title>
 </head>
@@ -22,7 +22,7 @@
     </nav>
     <section class="logoArea" style="width: full; height: 70px; margin: 0px; padding: 5px;">
         <div class="logo">
-            <img src="../asset/cart.png" alt="" height="70px">
+            <img src="../assets/cart.png" alt="" height="70px">
             <h1 class="logoText">BestCart</h1>
         </div>
         <div>
@@ -35,7 +35,7 @@
 
     <!-- mid section -->
     <section id="passContainer">
-        <form action="../controller/passChanger.php" method="post" onsubmit="return check()">
+        <form action="../controllers/passChanger.php" method="post" onsubmit="return check()">
             <div id="passBox">
                 <h3>Email: <?php echo $_SESSION['email'];?></h3><br>
                 <h3>Current Password: </h3><br>
@@ -101,6 +101,6 @@
             </div>
         </div>
     </footer>
-    <script src="../asset/changePass.js"></script>
+    <script src="../assets/changePass.js"></script>
 </body>
 </html>
